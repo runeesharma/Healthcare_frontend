@@ -62,7 +62,7 @@
 //     <button className='bg-primaryColor py-2 px-6 text-white font-[600]  h-[45px] flex items-center justify-center rounded-[30px]'>Login</button>
 //   </Link>
 //   <span className='md:hidden'>
-// <BiMenu className='w-6 h-6 cursor-pointer'></BiMenu>
+// {/* <BiMenu className='w-6 h-6 cursor-pointer'></BiMenu> */}
 //   </span>
 // </div>
 //         </div>
@@ -83,7 +83,7 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   return (
     <>
-      <div className="bg-gradient-to-r from-[#e3f281] from-10% via-[#d2c56c] via-30% to-[#fba748] to-90%  p-4">
+      <header className="bg-gradient-to-r from-[#fefefe] from-10% via-[#d2c56c] via-30% to-[#f9eee2] to-90%  fixed  w-full ">
         <div className="max-w-[1240px] items-center  py-[12px] flex justify-between mx-auto font-bold">
         <div className='gap-2 flex'> <img src={Logo}></img>
           <div className="text-3xl font-bold">Healthcare</div>
@@ -117,42 +117,13 @@ function Header() {
                 <li>Doctor</li>
               </Link>
               <Link to={"/login"}>
-              <li><button
-                    className="text-white 
-      inline-block
-      mt-10 
-      py-[5px]
-      px-[5px]
-      text-[24px]
-      font-bold
-      text-center
-      decoration-none
-      bg-[bg-gradient-to-r from-[#e3f281] from-10% via-[#d2c56c] via-30% to-[#fba748] to-90%]
-      border-black
-      border-[2px]
-      rounded-[15px]
-     shadow-[5px_5px_0px_black]
-      duration-[0.3s]
-      transition-all
-      ease-in
-      hover:bg-[#fff]
-      hover:text-[#ff5252]
-      hover:border-[#ff5252]
-      hover:shadow-[#ff5252]
-      active:bg-[#fcf414]
-      active:shadow-[none]
-      active:translate-y-[4px]
-      active:duration-[0.2s]
-      "
-                  >
-                    Login
-                  </button></li> 
+              <li> Login</li> 
                 </Link>
               
             </ul>
             {/*Responsive*/}
             <ul
-              className={` duration-300 md:hidden w-[20%] mt-7 h-screen text-white fixed bg-gradient-to-r from-[#e3f281] from-10% via-[#d2c56c] via-30% to-[#fba748] to-90% top-[92px] ${
+              className={` duration-300 md:hidden w-[40%] mt-[-4px]  h-screen text-white fixed bg-gradient-to-r from-[#e3f281] from-10% via-[#d2c56c] via-30% to-[#fba748] to-90% top-[92px] ${
                 toggle ? "left-[0]" : "left-[-100%]"
               } 
         `}
@@ -191,7 +162,7 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </header>
     </>
   );
 }
