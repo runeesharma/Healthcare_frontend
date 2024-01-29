@@ -3,9 +3,9 @@ import {
   FaFacebook,
   FaGithub,
   FaInstagram,
-  FaTwitter,
-  FaTwitch,
+  
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const sections = [
   {
@@ -29,8 +29,8 @@ const sections = [
 const items = [
   { name: "Facebook", icon: FaFacebook, link: "https://www.facebook.com/" },
   { name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/" },
-  { name: "Twitter", icon: FaTwitter, link: "https://twitter.com/" },
-  { name: "Twitch", icon: FaTwitch, link: "https://www.twitch.tv/" },
+ 
+ 
   { name: "Github", icon: FaGithub, link: "https://github.com/" },
 ];
 
@@ -62,7 +62,8 @@ const Footer = () => {
               type="email"
               placeholder="Enter email.."
             />
-            <button className="p-2 mb-4">Subscribe</button>
+            <Link to="/login">
+            <button className="p-2 mb-4">Subscribe</button></Link>
           </form>
         </div>
       </div>

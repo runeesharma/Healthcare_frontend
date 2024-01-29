@@ -4,10 +4,12 @@ import Home from '../pages/Home'
 import Service from '../pages/Service'
 import Header from '../Components/Header/Header'
 import Login from '../pages/Login'
-import Signup from '../pages/Signup'
-import Contact from '../pages/Contact'
+
+
 import Doctor from '../pages/Doctor/Doctor'
 import DoctorDetail from '../pages/Doctor/DoctorDetail'
+import Register from '../pages/Register'
+import About from '../Components/About/About'
 function Routers() {
   return (
    <Routes>
@@ -16,8 +18,8 @@ function Routers() {
     <Route path="/service" element={<Service/>} />
     <Route path="/header" element={<Header/>} />
     <Route path="/login" element={<Login/>} />
-    <Route path="/signup" element={<Signup/>} />
-    <Route path="/contact" element={<Contact/>} />
+    <Route path="/about" element={<About/>} />
+   <Route path="/register" element={<Register/>}/>
     <Route path="/doctor" element={<Doctor/>} />
     <Route path="/doctordetails" element={<DoctorDetail/>} />
    </Routes>

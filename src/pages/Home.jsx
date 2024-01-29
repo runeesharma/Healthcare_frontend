@@ -1,75 +1,132 @@
-import React from 'react'
+import React from "react";
+import { ReactTyped } from "react-typed";
+import { FaCircleArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import About from "../Components/About/About";
+// import Slider from '../Components/Slider'
+// import Card from '../Components/Crad'
 function Home() {
   return (
-   <section className='hero_section  pt-[60px] 2xl:h-[800px]'>
-    <div className='container'>
-<div className='flex flex-col lg:flex-row gap-[90px] items-center justify-between '>
-<div>
-  <div className='lg:w-[570px]'>
-<h1 className='text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px] mt-10'>we help patients live healthy, longer life</h1>
-<p  className='mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas impedit earum quaerat, sed mollitia iste cum deleniti, blanditiis repellendus adipisci inventore provident numquam ducimus eligendi aspernatur placeat ipsum culpa quos quis! Molestias consequatur, quas velit aspernatur omnis aut quidem nulla.</p>
-<button
-        className="text-black
-          inline-block
-          mt-10 
-          py-[5px]
-          px-[5px]
-          text-[24px]
-          font-bold
-          text-center
-          decoration-none
-          bg-[bg-gradient-to-r from-[#f1f1f0] from-10% via-[#f1e38b] via-30% to-[#ffbc15] to-90%]
-          border-black
-          border-[2px]
-          rounded-[15px]
-          shadow-[5px_5px_0px_black]
-          duration-[0.3s]
-          transition-all
-          ease-in
-          hover:bg-[#fff]
-          hover:text-[#1d1254cc]
-          hover:border-[#ff5252]
-          hover:shadow-[#ff5252]
-          active:bg-[#fcf414]
-          active:shadow-[none]
-          active:translate-y-[4px]
-          active:duration-[0.2s]"
-      >
-
-                    Request an Appointement
-                  </button>
-  </div>
-  {/* ======== hero counter =======*/}
-  <div className='mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]'>
-    <div>
-      <h2 className='text-[36px] leadidng-[56px] lg:text-[44px] lg:leading-[54px] font=[700] text-headingColor'>30+</h2>
-      <span className='w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px]'> </span>
-      <p className=''>Years of Experience</p>
+    <div className="">
+      {/* <div className='max-w-[90%] '>
+  <Slider/>
+</div> */}
+      {/* first */}
+      <div className=" bg-[#000038]  py-[100px]">
+        <div className="text-center">
+          <h3 className="text-white font-bold text-5xl py-[20px]">
+            BOOK N MEET A DOCTOR !
+          </h3>
+          <ReactTyped
+            className="bg-white text-xl font-bold"
+            strings={[
+              "Prevention of yesterday",
+              "Awareness today",
+              "healthier tomorrow",
+            ]}
+            typespeed={100}
+            loop={true}
+            backSpeed={100}
+          />
+          <p className="text-white py-[10px] font-semibold">
+            India's best online appointement scheduling platform
+          </p>
+          <div className="flex gap-5 justify-center py-[30px]">
+            <div className="rounded-xl border-solid border-4 border-[#f3f3f7]">
+              <select name="State" className="h-10 ">
+                <option value>State</option>
+                <option value="B"> Bihar</option>
+                <option value="D">Delhi</option>
+                <option value="UP">Uttar Pradesh</option>
+                <option value="WB">West Bengal</option>
+                <option value="J">Jharkhand</option>
+                <option value="R">Rajsthan</option>
+                <option value="MP">Madhya Pradesh</option>
+                <option value="AP"></option>
+                <option value="AP"></option>
+                <option value="AP"></option>
+                <option value="AP"></option>
+              </select>
+            </div>
+            <div className="rounded-xl border-solid border-4 border-[#f3f3f7]">
+              <input
+                placeholder="Doctor/specialization"
+                type="text"
+                className="h-10 "
+              ></input>
+              <button className="bg-[#59faf5] h-10 rounded-l ">Search</button>
+            </div>
+          </div>
+        </div>
+        <div className="flex ">
+          <div className="w-[200px] h-[200px] p-5 flex flex-row  gap-10 ">
+            <img src="../src/assets/c2.jpg" alt="" className="rounded-xl border-solid border-4 border-[#f3f3f7]" />
+            <img src="../src/assets/c3.jpg" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
+            <img src="../src/assets/c4.webp" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
+            <img src="../src/assets/c1.avif" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
+            <img src="../src/assets/c5.jpg" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]" />
+            <img src="../src/assets/c6.avif" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
+            <img src="../src/assets/c7.avif" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
+                
+          </div>
+        </div>
+        {/* second */}
+      </div>
+      <div className="text-center py-[50px] bg-gray-200">
+        <h2 className="font-extrabold text-2xl">
+          PROVIDING THE BEST MEDICAL SERVICES
+        </h2>
+        <p className="text-l font-semibold">
+          world-class care for everyone.Our health System offers
+          unmatched,expert health care
+        </p>
+        <div className="flex py-[50px] gap-[100px] ">
+          <div className="bg-white ml-20  rounded-lg m-3 h-[350px] w-[300px]">
+            <div>
+              <img src="../src/assets/location.png"></img>
+            </div>
+            <h3 className="font-semibold text-xl text-[#3f89f7]">Find a Doctor</h3>
+            <div>
+              {" "}
+             First class care for everyone. Our health System offers unmatched,expert health care . From the lab to clinic{" "}
+            </div>
+            <Link to="/doctor" className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+            <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 "/></Link>
+          </div>
+       
+         <div className="bg-white ml-20  rounded-lg m-3 h-[350px] w-[300px] ">
+            <div>
+              <img src="../src/assets/location.png"></img>
+            </div>
+            <h3 className="font-semibold text-xl text-[#3f89f7]">Know Your Doctors</h3>
+            <div>
+              {" "}
+              Know your Doctor to book confirmed <br/>doctor Appointment effortlessly<br/> with clinic details {" "}
+            </div>
+            <Link to="/doctordetails" className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+            <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 "/></Link>
+          </div>
+          <div className="bg-white ml-20  rounded-lg m-3  h-[350px] w-[300px]">
+            <div>
+              <img src="../src/assets/location.png"></img>
+            </div>
+            <h3 className="font-semibold text-xl text-[#3f89f7]">Book Appointment</h3>
+            <div>
+              {" "}
+              Empowering with 
+              Google verified <br/> SMS & dynamic 
+              Email notifications<br/>. Confirmed Doctor Appointment.
+            </div>
+            <Link to="/doctor" className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+            <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 "/></Link>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#000038]">
+      <About/>
+      </div>
     </div>
-    <div>
-      <h2 className='text-[36px] leadidng-[56px] lg:text-[44px] lg:leading-[54px] font=[700] text-headingColor'>15+</h2>
-      <span className='w-[100px] h-2 bg-purpleColor rounded-full block mt-[-14px]'> </span>
-      <p className=''>Clinic Location</p>
-    </div>
-    <div>
-      <h2 className='text-[36px] leadidng-[56px] lg:text-[44px] lg:leading-[54px] font=[700] text-headingColor'>100%</h2>
-      <span className='w-[100px] h-2 bg-[#42e2b5] rounded-full block mt-[-14px]'> </span>
-      <p className=''>Patient Satisfaction</p>
-    </div>
-  </div>
-</div>
-<div  className='flex gap-[30px] jystify-end'>
-   <div>
-    <img src="src/assets/doctor.webp" className='w-full mt-40'></img>
-   </div>
-   <div className='mt-[30px]'>
-    <img src="src/assets/doc2.avif" className='w-full mb-[30px] '></img>
-   </div>
-</div>
-</div>
-    </div>
-   </section>
-  )
+  );
 }
 
-export default Home
+export default Home;

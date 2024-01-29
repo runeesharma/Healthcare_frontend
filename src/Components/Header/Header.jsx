@@ -83,7 +83,7 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   return (
     <>
-      <header className="bg-gradient-to-r from-[#fefefe] from-10% via-[#d2c56c] via-30% to-[#f9eee2] to-90%  fixed  w-full ">
+      <header className="bg-white  w-full ">
         <div className="max-w-[1240px] items-center  py-[12px] flex justify-between mx-auto font-bold">
         <div className='gap-2 flex'> <img src={Logo}></img>
           <div className="text-3xl font-bold">Healthcare</div>
@@ -100,14 +100,12 @@ function Header() {
             />
           )}
           <div className="gap-10 flex">
-            <ul className="hidden md:flex  text-white gap-5">
+            <ul className="hidden md:flex  text-black gap-5">
               <Link to={"/home"}>
                 <li>Home</li>
               </Link>
-              <Link to={"/contact"}>
-                {" "}
-                <li>Contact</li>
-              </Link>
+             
+              
               <Link to={"/service"}>
                 {" "}
                 <li>Services</li>
@@ -131,10 +129,7 @@ function Header() {
               <Link to={"/home"}>
                 <li className="p-5">Home</li>
               </Link>
-              <Link to={"/contact"}>
-                {" "}
-                <li className="p-5">Contact</li>
-              </Link>
+              
               <Link to={"/service"}>
                 {" "}
                 <li className="p-5">Services</li>
