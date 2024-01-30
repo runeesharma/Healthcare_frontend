@@ -1,8 +1,9 @@
 import React,{useState} from "react";
 import "./Register.jsx"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+ 
   const loginUrl = "http://localhost:3000/login";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,23 +19,38 @@ function Login() {
       method: "POST",
       body: JSON.stringify(body),
       headers: {
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"
+      }
     })
       .then((response) => response.json())
       .then((json) => {
         setMessage(json.message);
-        if(json.isSuccess){
-          localStorage.setItem("token",json.token)
-          navigate("/dashboard")
+        if (json.isSuccess) {
+          localStorage.setItem("token", json.token);
+          navigate("/dashboard");
         }
       })
       .catch((error) => {
+        console.error("Error during login:", error);
         setMessage("Internal Error");
-      })
+        console.log("Full response:", error.response); // Log the full response object
+      });
     }
   return (
+
+<div>
+    <div className="bg-blue-900 h-[40px] flex flex-row text-centre items-center  ">
+          <div className=" text-sm flex flex-row text-centre items-center m-[200px]">
+            <span className=" text-white">
+            <Link to="/home">
+              Home
+             </Link>
+            </span>
+            <h4 className="text-gray-400">~Login</h4>
+          </div>
+        </div>
     <div className=" bg-[#000038] flex items-center justify-center h-screen">
+       
       <div className="max-w-[960px] bg-black-dark p-5 rounded-2xl grid grid-cols-2 gap-20">
         <div className="relative">
           <img src="src/assets/hospital.jpg" alt="" />
@@ -105,6 +121,7 @@ function Login() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

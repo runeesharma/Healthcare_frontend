@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
 import "./Login.jsx"
 import {  useNavigate } from 'react-router-dom';
-import axios from 'axios';
+
 function Register() {
-  // const registerUrl = "http://localhost:6000/register";
-  axios.post("/register")
+
+const registerUrl =  'http://localhost:3000/register';
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,36 +15,48 @@ function Register() {
   const Register=()=>{
     console.log(name, phone, email, password);
     const body = {
-      name: name,
-      password: password,
+      name,
       email,
       phone,
+      password
     };
+   
+   
     fetch(registerUrl, {
       method: "POST",
       body: JSON.stringify(body),
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       }
     })
-    .then((response) => response.json())
-    .then((json) => {
-      setMessage(json.message);
-      navigate("/login")
+      .then((response) => response.json())
+      .then((json) => {
+        setMessage(json.message);
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.error("Error during registration:", error);
+        setMessage("Internal Error");
+        console.log("Full response:", error.response); // Log the full response object
+      });
 
-    })
-    .catch((error) => {
-      setMessage("Internal Error");
-    })
+
     
    
   }
 
 
-
-
   return (
-    <div className=" bg-[#000038] flex items-center justify-center h-screen">
+  <div>
+       <div className="bg-blue-900 h-[40px] flex flex-row text-centre items-center  ">
+          <div className=" text-sm flex flex-row text-centre items-center m-[200px]">
+            <span className=" text-white">
+              <a href="../pages/Home">Home </a>{" "}
+            </span>
+            <h4 className="text-gray-400">~Services</h4>
+          </div>
+        </div>
+          <div className=" bg-[#000038] flex items-center justify-center h-screen">
       <div className="max-w-[960px] bg-black-dark p-5 rounded-2xl grid grid-cols-2 gap-20">
         <div className="relative ">
           <img src="src/assets/hospital.jpg" alt=""  />
@@ -131,6 +144,7 @@ function Register() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

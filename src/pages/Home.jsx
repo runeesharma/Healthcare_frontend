@@ -12,13 +12,15 @@ function Home() {
   <Slider/>
 </div> */}
       {/* first */}
-      <div className=" bg-[#000038]  py-[100px]">
+      <div className=" bg-[#000038]  py-[100px] mx-auto">
         <div className="text-center">
+
+          
           <h3 className="text-white font-bold text-5xl py-[20px]">
             BOOK N MEET A DOCTOR !
           </h3>
           <ReactTyped
-            className="bg-white text-xl font-bold"
+            className="bg-white text-2xl font-bold"
             strings={[
               "Prevention of yesterday",
               "Awareness today",
@@ -57,9 +59,9 @@ function Home() {
               <button className="bg-[#59faf5] h-10 rounded-l ">Search</button>
             </div>
           </div>
-        </div>
-        <div className="flex ">
-          <div className="w-[200px] h-[200px] p-5 flex flex-row  gap-10 ">
+        </div>  
+        <div className="flex mx-auto ">
+          <div className=" w-[200px] h-[200px] p-5 gap-10 flex-row hidden ">
             <img src="../src/assets/c2.jpg" alt="" className="rounded-xl border-solid border-4 border-[#f3f3f7]" />
             <img src="../src/assets/c3.jpg" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
             <img src="../src/assets/c4.webp" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
@@ -72,7 +74,7 @@ function Home() {
         </div>
         {/* second */}
       </div>
-      <div className="text-center py-[50px] bg-gray-200">
+      <div className="text-center py-[50px] bg-gray-200 mx-auto">
         <h2 className="font-extrabold text-2xl">
           PROVIDING THE BEST MEDICAL SERVICES
         </h2>
@@ -83,7 +85,7 @@ function Home() {
         <div className="flex py-[50px] gap-[100px] ">
           <div className="bg-white ml-20  rounded-lg m-3 h-[350px] w-[300px]">
             <div>
-              <img src="../src/assets/location.png"></img>
+              <img src="../src/assets/location.png" ></img>
             </div>
             <h3 className="font-semibold text-xl text-[#3f89f7]">Find a Doctor</h3>
             <div>
@@ -96,7 +98,7 @@ function Home() {
        
          <div className="bg-white ml-20  rounded-lg m-3 h-[350px] w-[300px] ">
             <div>
-              <img src="../src/assets/location.png"></img>
+              <img src="../src/assets/know.png "></img>
             </div>
             <h3 className="font-semibold text-xl text-[#3f89f7]">Know Your Doctors</h3>
             <div>
@@ -108,7 +110,7 @@ function Home() {
           </div>
           <div className="bg-white ml-20  rounded-lg m-3  h-[350px] w-[300px]">
             <div>
-              <img src="../src/assets/location.png"></img>
+              <img src="../src/assets/appoint.png"></img>
             </div>
             <h3 className="font-semibold text-xl text-[#3f89f7]">Book Appointment</h3>
             <div>
@@ -121,8 +123,9 @@ function Home() {
             <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 "/></Link>
           </div>
         </div>
-      </div>
-      <div className="bg-[#000038]">
+        </div>
+      {/* third */}
+      <div className="mx-auto">
       <About/>
       </div>
     </div>
