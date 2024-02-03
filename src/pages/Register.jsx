@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import "./Login.jsx"
 import {  useNavigate } from 'react-router-dom';
+import GenderSelect from '../Components/GenderSelect'
 
 function Register() {
 
@@ -11,7 +12,12 @@ const registerUrl =  'http://localhost:3000/register';
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const[gender,setGender]=useState();
+  const [dob, setDob] = useState("");
    const navigate=useNavigate()
+   const handleGenderChange = (e) => {
+    setGender(e.target.value);
+  };
   const Register=()=>{
     console.log(name, phone, email, password);
     const body = {
@@ -59,7 +65,7 @@ const registerUrl =  'http://localhost:3000/register';
           <div className=" bg-[#000038] flex items-center justify-center h-screen">
       <div className="max-w-[960px] bg-black-dark p-5 rounded-2xl grid grid-cols-2 gap-20">
         <div className="relative ">
-          <img src="src/assets/hospital.jpg" alt=""  />
+          <img src="src/assets/hospital.jpg" className='h-[400px] mt-[100px]' alt=""  />
         </div>
         <div className="max-w-80">
           <h1 className="text-5xl  font-bold text-white">REGISTER</h1>
@@ -128,6 +134,41 @@ const registerUrl =  'http://localhost:3000/register';
                onChange={(e) => setPhone(e.target.value)}
                 type="phone"
                 placeholder="YOUR..PHONE "
+                className="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-2 focus:ring-neon-blue focus:drop-shadow-lg"
+              />
+            </div>
+            <div className="relative">
+              <div className="absolute top-1 left-1 bg-white-medium rounded-full p-1 flex items-center justify-center bg-blue-300">
+                <img
+                  src="../src/assets/phone.jpg"
+                  alt=""
+                  className="w-6 rounded-full"
+                ></img>
+              </div>
+
+              <input
+               value={gender}
+               onChange={(e) => setGender(e.target.value)}
+                type="phone"
+                placeholder="YOUR..GENDER "
+                className="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-2 focus:ring-neon-blue focus:drop-shadow-lg"
+              />
+                <GenderSelect value={gender} onChange={handleGenderChange} />
+            </div>
+            <div className="relative">
+              <div className="absolute top-1 left-1 bg-white-medium rounded-full p-1 flex items-center justify-center bg-blue-300">
+                <img
+                  src="../src/assets/phone.jpg"
+                  alt=""
+                  className="w-6 rounded-full"
+                ></img>
+              </div>
+
+              <input
+               value={dob}
+               onChange={(e) => setDob(e.target.value)}
+                type="date"
+                placeholder="YOUR..DOB"
                 className="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-2 focus:ring-neon-blue focus:drop-shadow-lg"
               />
             </div>

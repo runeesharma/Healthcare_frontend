@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-function Surgeon() {
+function Psychiatrist() {
   return (
     <>
     <div className="bg-gray-300 m-0 p-0 w-full h-full">
@@ -9,12 +9,12 @@ function Surgeon() {
           <span className=" text-white">
             <Link to="/home">Home</Link>
           </span>
-          <h4 className="text-gray-400">~Surgeon</h4>
+          <h4 className="text-gray-400">~Psychiatrist</h4>
         </div>
       </div>
       <div className="flex align-middle items-center justify-center p-10 bg-blue-200">
         <h1 className="text-3xl font-bold text-blue-700">
-          Best Surgeons In India
+          Best Psychiatrists In India
         </h1>
       </div>
       <div className="md:m-10 flex flex-col md:flex-row  gap-10">
@@ -323,4 +323,4 @@ function Surgeon() {
   )
 }
 
-export default Surgeon
+export default Psychiatrist

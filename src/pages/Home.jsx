@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactTyped } from "react-typed";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import About from "../Components/About/About";
-// import Slider from '../Components/Slider'
-// import Card from '../Components/Crad'
+import Findandbook from "../Components/Book/Findandbook";
+
 function Home() {
+  const [searchInput, setIn] = useState();
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/${searchInput}`);
+  };
   return (
     <div className="">
-      {/* <div className='max-w-[90%] '>
-  <Slider/>
-</div> */}
       {/* first */}
       <div className=" bg-[#000038]  py-[100px] mx-auto">
         <div className="text-center">
-
-          
           <h3 className="text-white font-bold text-5xl py-[20px]">
             BOOK N MEET A DOCTOR !
           </h3>
@@ -55,20 +55,49 @@ function Home() {
                 placeholder="Doctor/specialization"
                 type="text"
                 className="h-10 "
+                onChange={(e) => setIn(e.target.value)}
               ></input>
-              <button className="bg-[#59faf5] h-10 rounded-l ">Search</button>
+              <button onClick={handleNavigate} className="bg-[#59faf5] h-10 rounded-l ">Search</button>
             </div>
           </div>
-        </div>  
+        </div>
         <div className="flex mx-auto ">
-          <div className=" w-[200px] h-[200px] p-5 gap-10 flex-row hidden ">
-            <img src="../src/assets/c2.jpg" alt="" className="rounded-xl border-solid border-4 border-[#f3f3f7]" />
-            <img src="../src/assets/c3.jpg" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
-            <img src="../src/assets/c4.webp" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
-            <img src="../src/assets/c1.avif" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
-            <img src="../src/assets/c5.jpg" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]" />
-            <img src="../src/assets/c6.avif" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
-            <img src="../src/assets/c7.avif" alt=""  className="rounded-xl border-solid border-4 border-[#f3f3f7]"/>
+          <div className=" w-[200px] h-[200px] p-5 gap-10 flex ">
+            <img
+              src="../src/assets/c2.jpg"
+              alt=""
+              className="rounded-xl border-solid border-4 border-[#f3f3f7]"
+            />
+            <img
+              src="../src/assets/c3.jpg"
+              alt=""
+              className="rounded-xl border-solid border-4 border-[#f3f3f7]"
+            />
+            <img
+              src="../src/assets/c4.webp"
+              alt=""
+              className="rounded-xl border-solid border-4 border-[#f3f3f7]"
+            />
+            <img
+              src="../src/assets/c1.avif"
+              alt=""
+              className="rounded-xl border-solid border-4 border-[#f3f3f7]"
+            />
+            <img
+              src="../src/assets/c5.jpg"
+              alt=""
+              className="rounded-xl border-solid border-4 border-[#f3f3f7]"
+            />
+            <img
+              src="../src/assets/c6.avif"
+              alt=""
+              className="rounded-xl border-solid border-4 border-[#f3f3f7]"
+            />
+            <img
+              src="../src/assets/c7.avif"
+              alt=""
+              className="rounded-xl border-solid border-4 border-[#f3f3f7]"
+            />
                 
           </div>
         </div>
@@ -85,48 +114,72 @@ function Home() {
         <div className="flex py-[50px] gap-[100px] ">
           <div className="bg-white ml-20  rounded-lg m-3 h-[350px] w-[300px]">
             <div>
-              <img src="../src/assets/location.png" ></img>
+              <img src="../src/assets/location.png"></img>
             </div>
-            <h3 className="font-semibold text-xl text-[#3f89f7]">Find a Doctor</h3>
+            <h3 className="font-semibold text-xl text-[#3f89f7]">
+              Find a Doctor
+            </h3>
             <div>
               {" "}
-             First class care for everyone. Our health System offers unmatched,expert health care . From the lab to clinic{" "}
+              First class care for everyone. Our health System offers
+              unmatched,expert health care . From the lab to clinic{" "}
             </div>
-            <Link to="/doctor" className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-            <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 "/></Link>
+            <Link
+              to="/doctor"
+              className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+            >
+              <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 " />
+            </Link>
           </div>
-       
-         <div className="bg-white ml-20  rounded-lg m-3 h-[350px] w-[300px] ">
+
+          <div className="bg-white ml-20  rounded-lg m-3 h-[350px] w-[300px] ">
             <div>
               <img src="../src/assets/know.png "></img>
             </div>
-            <h3 className="font-semibold text-xl text-[#3f89f7]">Know Your Doctors</h3>
+            <h3 className="font-semibold text-xl text-[#3f89f7]">
+              Know Your Doctors
+            </h3>
             <div>
               {" "}
-              Know your Doctor to book confirmed <br/>doctor Appointment effortlessly<br/> with clinic details {" "}
+              Know your Doctor to book confirmed <br />
+              doctor Appointment effortlessly
+              <br /> with clinic details{" "}
             </div>
-            <Link to="/doctordetails" className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-            <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 "/></Link>
+            <Link
+              to="/doctordetails"
+              className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+            >
+              <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 " />
+            </Link>
           </div>
-          <div className="bg-white ml-20  rounded-lg m-3  h-[350px] w-[300px]">
+          <div className="bg-white ml-20  rounded-lg m-3  h-[350px] w-[300px] ">
             <div>
               <img src="../src/assets/appoint.png"></img>
             </div>
-            <h3 className="font-semibold text-xl text-[#3f89f7]">Book Appointment</h3>
+            <h3 className="font-semibold text-xl text-[#3f89f7]">
+              Book Appointment
+            </h3>
             <div>
               {" "}
-              Empowering with 
-              Google verified <br/> SMS & dynamic 
-              Email notifications<br/>. Confirmed Doctor Appointment.
+              Empowering with Google verified <br /> SMS & dynamic Email
+              notifications
+              <br />. Confirmed Doctor Appointment.
             </div>
-            <Link to="/doctor" className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-            <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 "/></Link>
+            <Link
+              to="/doctor"
+              className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+            >
+              <FaCircleArrowRight className=" group-hover:text-white w-6 h-5 " />
+            </Link>
           </div>
         </div>
-        </div>
+      </div>
       {/* third */}
       <div className="mx-auto">
-      <About/>
+        <About />
+      </div>
+      <div>
+        <Findandbook />
       </div>
     </div>
   );

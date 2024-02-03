@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div className="bg-[#000038]">
+      <div>
+        <p className="text-3xl text-center text-white font-bold pt-10">OUR DOCTOR'S</p>
+      </div>
       <div className="flex">
         <div className="px-[100px] pt-[60px]">
           <img
@@ -61,8 +64,8 @@ function About() {
           the Governor of Madhya Pradesh and Chancellor of Rani Durgavati
           Vishwavidyalaya
         </p>
-        <Link to="/doctors">
-          <button className="bg-[#31fae9] text-xl p-3 m-8 font-semibold rounded-2xl">
+        <Link to="/doctor">
+          <button className="bg-[#31fae9] text-xl border-4 border-black  p-3 m-8 font-semibold rounded-2xl hover:border-white hover:bg-[#000038] hover:text-white hover:border-4">
             See More...
           </button>
         </Link>

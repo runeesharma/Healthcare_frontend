@@ -1,21 +1,20 @@
-import React from "react";
+import React from 'react'
 import { Link } from "react-router-dom";
-
-function Cardio({show}) {
+function Dermatologist() {
   return (
     <>
       <div className="bg-gray-300 m-0 p-0 w-full h-full">
-       {show && <div className="bg-blue-900 h-[40px] flex flex-row text-centre items-center  ">
+        <div className="bg-blue-900 h-[40px] flex flex-row text-centre items-center  ">
           <div className=" text-sm flex flex-row text-centre items-center m-[200px]">
             <span className=" text-white">
               <Link to="/home">Home</Link>
             </span>
-            <h4 className="text-gray-400">~Cardiologist</h4>
+            <h4 className="text-gray-400">~Dermatologist</h4>
           </div>
-        </div>}
+        </div>
         <div className="flex align-middle items-center justify-center p-10 bg-blue-200">
           <h1 className="text-3xl font-bold text-blue-700">
-            Best Cardiologists In India
+            Best Dermatologists In India
           </h1>
         </div>
         <div className="md:m-10 flex flex-col md:flex-row  gap-10">
@@ -30,15 +29,15 @@ function Cardio({show}) {
                 // alt=""
               />
             </div>
-            <div class="flex flex-col justify-between p-4 leading-normal md:row">
+            <div class="flex flex-col justify-between p-4 leading-normal">
               <div class="uppercase tracking-wide text-xl text-indigo-500 font-semibold">
-                <a href=""> Dr. Suresh Joshi</a>
+                <a href="">Dr. S K Bose</a>
               </div>
-              <p> Speciality: Pediatric Cardiac Surgeon</p>
-              <p>Experience: 38+ Years</p>
+              <p> Speciality: Dermatologist</p>
+              <p>Experience: 36+ Years</p>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 {" "}
-                Qualification: MBBS, MS, MCh, FACS, FICS, FCCP
+                Qualification: MBBS, MD, DMTH, DVD
               </p>
               <Link to="/hospital">
                 <button className="bg-blue-600 p-10 py-3  text-white font-serif rounded-lg">
@@ -60,14 +59,14 @@ function Cardio({show}) {
             </div>
             <div class="flex flex-col justify-between p-4 leading-normal">
               <div class="uppercase tracking-wide text-xl text-indigo-500 font-semibold">
-                <a href="">Dr. T S Kler</a>
+                <a href="">Dr. Rachna Jagia</a>
               </div>
-              <p> Speciality: Interventional Cardiologist</p>
-              <p>Experience: 30+ Years</p>
+              <p> Speciality: InteSpeciality: Dermatologist</p>
+              <p>Experience: 15+ Years</p>
 
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 {" "}
-                Qualification: MBBS, MD, DM
+                Qualification: MBBS, MD, DNB, Diplomate American Board
               </p>
               <Link to="/hospital">
                 <button className="bg-blue-600 p-10 py-3  text-white font-serif rounded-lg">
@@ -321,7 +320,7 @@ function Cardio({show}) {
 
       </div>
     </>
-  );
+  )
 }
 
-export default Cardio;
+export default Dermatologist

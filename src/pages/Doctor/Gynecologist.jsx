@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Cardio({show}) {
+function Gynecologist() {
   return (
     <>
       <div className="bg-gray-300 m-0 p-0 w-full h-full">
-       {show && <div className="bg-blue-900 h-[40px] flex flex-row text-centre items-center  ">
+        <div className="bg-blue-900 h-[40px] flex flex-row text-centre items-center  ">
           <div className=" text-sm flex flex-row text-centre items-center m-[200px]">
             <span className=" text-white">
               <Link to="/home">Home</Link>
             </span>
-            <h4 className="text-gray-400">~Cardiologist</h4>
+            <h4 className="text-gray-400">~Gynacologist</h4>
           </div>
-        </div>}
+        </div>
         <div className="flex align-middle items-center justify-center p-10 bg-blue-200">
           <h1 className="text-3xl font-bold text-blue-700">
-            Best Cardiologists In India
+            Best Gynacologists In India
           </h1>
         </div>
         <div className="md:m-10 flex flex-col md:flex-row  gap-10">
@@ -30,7 +30,7 @@ function Cardio({show}) {
                 // alt=""
               />
             </div>
-            <div class="flex flex-col justify-between p-4 leading-normal md:row">
+            <div class="flex flex-col justify-between p-4 leading-normal">
               <div class="uppercase tracking-wide text-xl text-indigo-500 font-semibold">
                 <a href=""> Dr. Suresh Joshi</a>
               </div>
@@ -324,4 +324,4 @@ function Cardio({show}) {
   );
 }
 
-export default Cardio;
+export default Gynecologist;
