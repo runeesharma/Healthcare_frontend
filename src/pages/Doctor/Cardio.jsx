@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Cardio({show}) {
   return (
     <>
-      <div className="bg-gray-300 m-0 p-0 w-full h-full">
+      <div className="bg-black m-0 p-0 w-full h-full">
        {show && <div className="bg-blue-900 h-[40px] flex flex-row text-centre items-center  ">
           <div className=" text-sm flex flex-row text-centre items-center m-[200px]">
             <span className=" text-white">
